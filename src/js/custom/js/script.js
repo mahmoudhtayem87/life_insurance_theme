@@ -1,5 +1,63 @@
 
+$(document).ready(function(){
+	$(".section.about-page").each(function(index){
+		if(index % 2 != 0)
+		$(this).addClass("bg-light")
+	});
+});
+function vhToPx(value) {
+	var w = window,
+		d = document,
+		e = d.documentElement,
+		g = d.getElementsByTagName('body')[0],
+		x = w.innerWidth || e.clientWidth || g.clientWidth,
+		y = w.innerHeight || e.clientHeight || g.clientHeight;
 
+	var result = (y * value) / 100;
+	return result;
+}
+function vwToPx(value) {
+	var w = window,
+		d = document,
+		e = d.documentElement,
+		g = d.getElementsByTagName('body')[0],
+		x = w.innerWidth || e.clientWidth || g.clientWidth,
+		y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+	var result = (x * value) / 100;
+	return result;
+}
+
+function popup(url, title) {
+	//notificationsModal
+	$("#notificationsModalTitle").text(title);
+	$("#notificationsFrame").hide();
+	$('#notificationsModal').modal('show');
+	$("#notificationsFrame").attr('src', url);
+	$("#notificationsFrame").on("load", function () {
+		let head = $("#notificationsFrame").contents().find("head");
+		let css = `<style>
+        .lfr-product-menu-panel
+            {
+                display:none!important;
+            }
+        #wrapper
+            {
+                padding:0!important;
+            }
+        .control-menu-container
+            {
+                display:none!important;
+            }
+        </style>`;
+		$(head).append(css);
+
+	});
+	window.setTimeout(() => {
+		$("#notificationsFrame").show();
+	}, 1000); // 5 seconds
+
+}
 
 ; (function ($) {
 
@@ -180,11 +238,37 @@
 
 	}
 
-	try {
-		$(".sidebar-widget").first().addClass("pt-0");
-	} catch (exp) {
+	function popup(url, title) {
+		//notificationsModal
+		$("#notificationsModalTitle").text(title);
+		$("#notificationsFrame").hide();
+		$('#notificationsModal').modal('show');
+		$("#notificationsFrame").attr('src', url);
+		$("#notificationsFrame").on("load", function () {
+			let head = $("#notificationsFrame").contents().find("head");
+			let css = `<style>
+        .lfr-product-menu-panel
+            {
+                display:none!important;
+            }
+        #wrapper
+            {
+                padding:0!important;
+            }
+        .control-menu-container
+            {
+                display:none!important;
+            }
+        </style>`;
+			$(head).append(css);
+
+		});
+		window.setTimeout(() => {
+			$("#notificationsFrame").show();
+		}, 1000); // 5 seconds
 
 	}
+
 
 
 })(jQuery);

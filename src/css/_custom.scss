@@ -129,6 +129,18 @@ body {
 	{
 		cursor: pointer;
 	}
+	.btn-main
+	{
+		background-color: var(--primary);
+		border-color: var(--primary);
+		color: var(--light);
+	}
+	.btn-main:hover
+	{
+		background-color: var(--secondary);
+		border-color: var(--secondary);
+		color: var(--light);
+	}
 	.btn-main-2
 	{
 		background-color: var(--primary);
@@ -213,5 +225,109 @@ body {
 		height: 100%!important;
 		top: 0!important;
 	}
+	.sign-in .taglib-icon-label
+	{
+		color:var(--light)!important;
+	}
+	.sign-in .lexicon-icon.lexicon-icon-user
+	{
+		fill:var(--light)!important;
+	}
 	
+	.overlay:before
+	{
+		background: var(--primary)!important;
+		opacity: 0.5!important;
+	}
+	.features i
+	{
+		color: var(--primary)!important;
+	}
+	.features h4
+	{
+		color: var(--primary)!important;
+	}
+	.cta:before
+	{
+		background: var(--primary)!important;
+		opacity: 0.5!important;
+	}
+	.cta-section i
+	{
+		color:var(--light)!important;
+		opacity: 0.5;
+	}
+	.cta-section .h3
+	{
+		color: var(--primary);
+	}
+	.section-title h2
+	{
+		color: var(--primary);
+	}
+	.service-col i
+	{
+		color: var(--primary);
+	}
+	.service-col h4
+	{
+		color: var(--primary);
+	}
+	.lfr-ddm__default-page-header-title
+	{
+		color: var(--primary);
+	}
+	.emergency
+	{
+		background:var(--primary)!important;
+	}
+	.about h2
+	{
+		color:var(--primary);
+	}
+	.feature-item i
+	{
+		color: var(--primary)!important;
+	}
+	.feature-item.bg-primary i
+	{
+		color: var(--light)!important;
+	}
+	.appoinment-wrap .lfr-ddm__default-page-header
+	{
+		display: none!important;
+	}
+	.lfr-ddm-form-page-title
+	{
+		color: var(--primary)!important;
+	}
+	.backtop
+	{
+		background: var(--primary)!important;
+	}
+	header .languageSelectorDropDown
+	{
+		color: var(--light)!important;
+	}
+	header .badge
+	{
+		background-color: var(--dark);
+		background: var(--dark);
+	}
+	.feature-block h4
+	{
+		color: var(--primary);
+	}
+	.banner h1
+	{
+		color: var(--primary)!important;
+	}
+	.banner .block.p-4 h1
+	{
+		color: var(--light)!important;
+	}
+	.modal
+	{
+		display: none;
+	}
 }
